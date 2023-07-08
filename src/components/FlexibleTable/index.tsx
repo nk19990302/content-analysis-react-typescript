@@ -7,6 +7,10 @@ type PropType = {
   dataset?: Array<Array<string | ReactNode>>;
 }
 
+/*
+  We can make it quit reusable by 
+  getting style props and config based on requirement
+*/
 const FlexibleTable = ({ headings = [], dataset = [] }: PropType) => {
 
   const renderDataSet = (data: Array<string | ReactNode>, index: number) => {

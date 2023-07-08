@@ -8,6 +8,10 @@ export enum TYPE {
   Gamma
 }
 
+/* 
+  In case, we are performing both type operation on same data.
+  We can simultaneously create both dataset and return in object
+*/
 export const convertToFlexibleTableDataset = (data: Array<Alcohol>, type: TYPE = TYPE.Flavanoids): Array<Array<string | ReactNode>> => {
 
   let dataset: Array<Array<string | ReactNode>> = []

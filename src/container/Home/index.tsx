@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './index.css'
 import FlexibleTable from '../../components/FlexibleTable'
 import { TYPE, convertToFlexibleTableDataset } from './util'
+import { getData } from '../../services/data.service'
 
 const headingsFlavanoids = ['Measure', 'Flavanoids Median', 'Flavanoids Mean', 'Flavanoids Mode']
 const headingsGamma = ['Measure', 'Gamma Median', 'Gamma Mean', 'Gamma Mode']
@@ -11,8 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     (async () => {
-      const data = await fetch(process.env.PUBLIC_URL + "/assets/wineData.json");
-      setData(await data.json())
+      setData(await getData())
     })()
   }, [])
 
