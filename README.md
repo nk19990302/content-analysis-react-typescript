@@ -25,5 +25,8 @@
 7. You will see two urls to see the output in local and another to see the output on connected network.
 8. Open url(s) in browser to see the output
 
+### Screenshot
+
+![Screenshot](screenshot.png)
 
 `Note: To run this project, You must have latest version of node and yarn installed in your machine`
