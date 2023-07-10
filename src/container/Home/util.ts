@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { filterDataClassWise } from "../../utils/filter.util";
 import Alcohol from "../../models/alcohol.type";
-import { calculateMean, calculateMedian, calculateMode } from "../../utils/stats.util";
+import { calculateMean, calculateMedian, calculateMode, roundTo3Digit } from "../../utils/stats.util";
 
 export enum TYPE {
   Flavanoids,
@@ -49,5 +49,5 @@ const getClassDataForGamma = (type: string | number, data: Array<Alcohol>) => {
 }
 
 const gamma = (it: Alcohol) => {
-  return (it.Ash * it.Hue) / it.Magnesium
+  return roundTo3Digit((it.Ash * it.Hue) / it.Magnesium)
 }

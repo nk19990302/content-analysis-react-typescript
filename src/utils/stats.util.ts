@@ -29,7 +29,7 @@ export const calculateMode = (numbers: number[]) => {
 
         if (modeMap[number] > maxCount) {
             maxCount = modeMap[number];
-            mode = roundTo3Digit(number);
+            mode = number;
         }
     });
 
@@ -40,6 +40,6 @@ export const calculateMode = (numbers: number[]) => {
     return mode;
 }
 
-const roundTo3Digit = (num: number): number => {
+export const roundTo3Digit = (num: number): number => {
     return Math.round(num * 1000) / 1000
 }
